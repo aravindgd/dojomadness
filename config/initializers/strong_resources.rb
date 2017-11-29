@@ -31,4 +31,17 @@
 #
 # For additional documentation, see https://jsonapi-suite.github.io/strong_resources
 StrongResources.configure do
+  strong_resource :ability do
+    attribute :name, :string
+    attribute :description, :string
+    attribute :is_ultimate, :boolean
+    attribute :hero, :belongs_to
+  end
+  strong_resource :hero do
+    attribute :name, :string
+    attribute :real_name, :string
+    attribute :health, :integer
+    attribute :armour, :integer
+    attribute :shield, :integer
+  end
 end
