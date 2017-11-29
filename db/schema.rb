@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20171129143246) do
     t.index ["hero_id"], name: "index_abilities_on_hero_id"
   end
 
-  create_table "heros", force: :cascade do |t|
+  create_table "heroes", force: :cascade do |t|
     t.string   "name"
     t.string   "real_name"
     t.integer  "health"

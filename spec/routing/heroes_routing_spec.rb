@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe HerosController, type: :routing do
+RSpec.describe HeroesController, type: :routing do
   describe "routing" do
 
     it "routes to #index" do

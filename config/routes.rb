@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  resources :abilities
-  resources :heroes
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope path: '/api' do
     resources :docs, only: [:index], path: '/swagger'
 
     scope path: '/v1' do
-      resources :abilities
-      resources :heroes
+      resources :abilities, only: [:index, :show]
+      resources :heroes, only: [:index, :show] do
+        get :abilities
+      end
       # your routes go here
     end
   end

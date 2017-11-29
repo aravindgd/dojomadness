@@ -57,4 +57,9 @@ class HeroesController < ApplicationController
     hero.destroy
     return head(:no_content)
   end
+
+  def abilities
+    hero = Hero.find(params[:hero_id])
+    render_jsonapi(hero.abilities)
+  end
 end
