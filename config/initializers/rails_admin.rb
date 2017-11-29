@@ -7,6 +7,11 @@ RailsAdmin.config do |config|
   #   warden.authenticate! scope: :user
   # end
   # config.current_user_method(&:current_user)
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Login') do |username, password|
+      username == 'admin' && password == 'dojomadness'
+    end
+  end
 
   ## == Cancan ==
   # config.authorize_with :cancan
