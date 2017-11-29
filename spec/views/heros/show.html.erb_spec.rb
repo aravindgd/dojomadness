@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "heros/show", type: :view do
+RSpec.describe "heroes/show", type: :view do
   before(:each) do
     @hero = assign(:hero, Hero.create!(
       :name => "Name",

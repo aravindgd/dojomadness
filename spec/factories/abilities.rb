@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :ability do
-    name "MyString"
-    description "MyText"
+    name Faker::Name.name
+    description Faker::Overwatch.quote
     is_ultimate false
-    hero nil
+    hero { create(:hero) }
   end
 end

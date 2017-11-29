@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "heros#update", type: :request do
+RSpec.describe "heroes#update", type: :request do
   context 'basic update' do
     let!(:hero) { create(:hero) }
 
@@ -8,7 +8,7 @@ RSpec.describe "heros#update", type: :request do
       {
         data: {
           id: hero.id.to_s,
-          type: 'heros',
+          type: 'heroes',
           attributes: {
             # ... your attrs here
           }
@@ -19,7 +19,7 @@ RSpec.describe "heros#update", type: :request do
     # Replace 'xit' with 'it' after adding attributes
     xit 'updates the resource' do
       expect {
-        jsonapi_put "/api/v1/heros/#{hero.id}", payload
+        jsonapi_put "/api/v1/heroes/#{hero.id}", payload
       }.to change { hero.reload.attributes }
       assert_payload(:hero, hero, json_item)
 

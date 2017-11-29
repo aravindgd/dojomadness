@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "heros/index", type: :view do
+RSpec.describe "heroes/index", type: :view do
   before(:each) do
-    assign(:heros, [
+    assign(:heroes, [
       Hero.create!(
         :name => "Name",
         :real_name => "Real Name",
@@ -20,7 +20,7 @@ RSpec.describe "heros/index", type: :view do
     ])
   end
 
-  it "renders a list of heros" do
+  it "renders a list of heroes" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Real Name".to_s, :count => 2

@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "heros#index", type: :request do
+RSpec.describe "heroes#index", type: :request do
   context 'basic fetch' do
     let!(:hero1) { create(:hero) }
     let!(:hero2) { create(:hero) }
 
     it 'serializes the list correctly' do
-      get "/api/v1/heros"
+      get "/api/v1/heroes"
 
       expect(json_ids(true)).to match_array([hero1.id, hero2.id])
       assert_payload(:hero, hero1, json_items[0])

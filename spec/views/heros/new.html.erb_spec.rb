@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "heros/new", type: :view do
+RSpec.describe "heroes/new", type: :view do
   before(:each) do
     assign(:hero, Hero.new(
       :name => "MyString",
@@ -14,7 +14,7 @@ RSpec.describe "heros/new", type: :view do
   it "renders new hero form" do
     render
 
-    assert_select "form[action=?][method=?]", heros_path, "post" do
+    assert_select "form[action=?][method=?]", heroes_path, "post" do
 
       assert_select "input#hero_name[name=?]", "hero[name]"
 

@@ -3,7 +3,7 @@
 class HeroResource < ApplicationResource
   # Used for associating this resource with a given input.
   # This should match the 'type' in the corresponding serializer.
-  type :heros
+  type :heroes
   # Associate to a Model object so we know how to persist.
   model Hero
   # Customize your resource here. Some common examples:

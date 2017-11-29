@@ -1,4 +1,4 @@
-class HerosController < ApplicationController
+class HeroesController < ApplicationController
   # Mark this as a JSONAPI controller, associating with the given resource
   jsonapi resource: HeroResource
 
@@ -13,8 +13,8 @@ class HerosController < ApplicationController
 
   # Start with a base scope and pass to render_jsonapi
   def index
-    heros = Hero.all
-    render_jsonapi(heros)
+    heroes = Hero.all
+    render_jsonapi(heroes)
   end
 
   # Call jsonapi_scope directly here so we can get behavior like

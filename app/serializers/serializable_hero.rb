@@ -1,7 +1,7 @@
 # Serializers define the rendered JSON for a model instance.
 # We use jsonapi-rb, which is similar to active_model_serializers.
 class SerializableHero < JSONAPI::Serializable::Resource
-  type :heros
+  type :heroes
 
   # Add attributes here to ensure they get rendered, .e.g.
   #

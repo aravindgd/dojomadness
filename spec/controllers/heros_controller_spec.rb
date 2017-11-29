@@ -37,10 +37,10 @@ RSpec.describe HerosController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "assigns all heros as @heros" do
+    it "assigns all heroes as @heroes" do
       hero = Hero.create! valid_attributes
       get :index, params: {}, session: valid_session
-      expect(assigns(:heros)).to eq([hero])
+      expect(assigns(:heroes)).to eq([hero])
     end
   end
 
@@ -149,10 +149,10 @@ RSpec.describe HerosController, type: :controller do
       }.to change(Hero, :count).by(-1)
     end
 
-    it "redirects to the heros list" do
+    it "redirects to the heroes list" do
       hero = Hero.create! valid_attributes
       delete :destroy, params: {id: hero.to_param}, session: valid_session
-      expect(response).to redirect_to(heros_url)
+      expect(response).to redirect_to(heroes_url)
     end
   end
 

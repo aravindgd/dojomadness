@@ -31,5 +31,5 @@ JsonapiSpecHelpers::Payload.register(:ability) do
   key(:name, String)
   key(:description, String)
   key(:is_ultimate, [TrueClass, FalseClass])
-  key(:hero, BelongsTo)
+  # key(:hero, BelongsTo)
 end
