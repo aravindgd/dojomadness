@@ -57,6 +57,7 @@ gem 'jsonapi-rails', '~> 0.2.1'
 gem 'jsonapi_swagger_helpers', '~> 0.6', require: false
 gem 'jsonapi_spec_helpers', '~> 0.4', require: false
 gem 'kaminari', '~> 1.0'
+gem 'rails_admin', '~> 1.2'
 group :development, :test do
   gem 'rspec-rails', '~> 3.5.2'
   gem 'factory_bot_rails', '~> 4.0'
